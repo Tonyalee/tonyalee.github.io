@@ -4,3 +4,36 @@
   background-position: center center;
   background-size: cover;
 }
+
+//- variable
+.work-header {
+  --font-size-h1: '16rem';
+
+}
+
+//- container
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  max-width: 1500px;
+}
+.container {
+
+}
+
+//- works page
+
+.work-header {
+  &--title {
+    h1 {
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}

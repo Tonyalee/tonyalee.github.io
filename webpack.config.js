@@ -16,7 +16,7 @@ module.exports = (env, options) => {
   // - add 'options.additionalData' in sass-loader to pass variables
   const _gParams = {
     FILE_PREFIX: (options.mode === 'production') ? '/dist/' : '/',
-    IMG_PREFIX_URL: (options.mode === 'production') ? 'https://soarlin.github.io/' : '/'
+    IMG_PREFIX_URL: (options.mode === 'production') ? 'https://tonyalee.github.io/' : '/'
   };
 
   var config = {
@@ -158,25 +158,25 @@ module.exports = (env, options) => {
   };
 
   // For mutiple pug files
-  // glob.sync('./src/pug/*.pug').forEach((path) => {
-  //   const start = path.indexOf('/pug/') + 5;
-  //   const end = path.length - 4;
-  //   const name = path.slice(start, end);
-  //   config.plugins.push(
-  //     new HtmlWebpackPlugin({
-  //       template: './pug/' + name + '.pug',
-  //       filename: name + '.html',
-  //       inject: true,
-  //       chunks: ['index'],
-  //       minify: {
-  //         sortAttributes: true,
-  //         collapseWhitespace: false,
-  //         collapseBooleanAttributes: true,
-  //         removeComments: true
-  //       }
-  //     })
-  //   );
-  // });
+  glob.sync('./src/pug/*.pug').forEach((path) => {
+    const start = path.indexOf('/pug/') + 5;
+    const end = path.length - 4;
+    const name = path.slice(start, end);
+    config.plugins.push(
+      new HtmlWebpackPlugin({
+        template: './pug/' + name + '.pug',
+        filename: name + '.html',
+        inject: true,
+        chunks: ['index'],
+        minify: {
+          sortAttributes: true,
+          collapseWhitespace: false,
+          collapseBooleanAttributes: true,
+          removeComments: true
+        }
+      })
+    );
+  });
 
   return config;
 };
