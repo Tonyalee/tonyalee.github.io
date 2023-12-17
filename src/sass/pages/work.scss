@@ -1,0 +1,36 @@
+
+//- works page
+
+
+
+.work-header {
+}
+
+.summery-box {
+  &--title {
+    color: rgba(#ffffff, 0.8);
+    h1 {
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+}
+
+
+.work-item {
+  padding: 2rem;
+  width: 40%;
+  &--title {
+
+  }
+  &--content {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

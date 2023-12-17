@@ -4,8 +4,21 @@ html(lang="zh-TW")
   head
     include ../partials/_head.pug
   body
-    include ../partials/works/_header.pug
+    .wrapper
+      block header
+        include ../partials/works/_header.pug
 
-    block content
+      .container
+        block content
+          .content.content--work
+            .summery-box
+              .summery-box--title
+                h1 Tonya's Works
+                h3 Welcome this design space
+            .work-item
+              .work-item--title aaas sdds ss
+              .work-item--content
+                img(src='/images/background-0.jpg')
 
-    include ../partials/_footer.pug
+      block footer
+        include ../partials/_footer.pug
