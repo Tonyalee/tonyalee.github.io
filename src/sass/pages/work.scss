@@ -7,7 +7,8 @@
 }
 
 .summery-box {
-  &--title {
+  flex: 1;
+  &__title {
     color: rgba(#ffffff, 0.8);
     h1 {
       font-size: 4rem;
@@ -19,18 +20,89 @@
 
 }
 
+.work-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
 
 .work-item {
   padding: 2rem;
-  width: 40%;
-  &--title {
+  border-radius: 30px;
+  background-color: rgba(#fff, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0,0);
+  box-shadow: 0 0 1px #232323;
+
+
+  &:hover {
+    box-shadow: 0 0 25px #232323;
+    transform: translate(0,-2%);
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__descrip {
+    padding: 1rem 0 0.5rem 0;
 
   }
-  &--content {
+  &__content {
+    border-radius: 25px;
+    overflow: hidden;
     img {
       display: block;
       width: 100%;
       height: auto;
+      overflow: hidden;
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
     }
+  }
+}
+
+.descrip {
+  &__title {
+    padding: 0.3rem 0;
+
+  }
+  &__tool {
+    padding: 0.3rem 0;
+
+  }
+}
+
+.tag {
+  display: inline-flex;
+  color: rgb(31, 31, 31);
+  background-color: aquamarine;
+  border-radius: 10px;
+  padding: 0.2rem 0.7rem;
+  margin: 0 0.6rem 0.6rem 0;
+  box-shadow:2px 2px 2px rgba(#000, 0.05),4px 4px 6px rgba(#000, 0.02),6px 6px 12px rgba(#000, 0.03);
+
+  &-2 {
+    background-color:rgb(255, 222, 104);
+  }
+  &-3 {
+    background-color:rgb(255, 129, 129);
+  }
+  &-4 {
+    background-color:rgb(167, 248, 155);
+  }
+  &-5 {
+    background-color:rgb(152, 205, 255);
+  }
+  &-6 {
+    background-color:rgb(254, 156, 107);
+  }
+  &-7 {
+    background-color:rgb(255, 114, 140);
+  }
+  &-8 {
+    background-color:rgb(42, 196, 252);
   }
 }

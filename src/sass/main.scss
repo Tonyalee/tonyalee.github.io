@@ -5,6 +5,7 @@
 @import 'pages/work';
 @import 'pages/header';
 @import 'pages/footer';
+@import 'pages/float-tool';
 
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -17,4 +18,11 @@
   @include phone {
     font-size: 3.5rem;
   }
+}
+
+:root {
+  --wrapper-bg: #212121;
+  --primary-gold: #c0a062;
+  --primary-gold-gred: linear-gradient(to right, #c0a062 70%, rgba(0,0,0, 0) 100%);
+  --footer-height: 60px;
 }

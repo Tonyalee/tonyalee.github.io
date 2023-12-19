@@ -1,3 +1,18 @@
+
+
+::-moz-selection {
+  background: var(--primary-gold);
+  color: #fff;
+  text-shadow: none
+}
+
+::selection {
+  background: var(--primary-gold);
+  color: #fff;
+  text-shadow: none
+}
+
+
 .item-bg {
   background-image: url($imgPrefix+'images/background-0.jpg');
   background-repeat: no-repeat;
@@ -5,17 +20,7 @@
   background-size: cover;
 }
 
-//- variable
-.work-header {
-  --font-size-h1: '16rem';
-
-}
-
 //- container
-
-html {
-  // background-color: rgb(31, 31, 31);
-}
 
 body {
   display: block;
@@ -28,8 +33,10 @@ body {
   margin: 0;
   overflow: hidden;
   color: rgba(#fff, 0.95);
-  background-color: rgb(31, 31, 31);
+  background-color: #000;
 }
+
+
 
 .wrapper {
   display: flex;
@@ -38,6 +45,8 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: var(--wrapper-bg);
+  // background: linear-gradient(to right, rgb(30, 60, 114), rgb(42, 82, 152));
 }
 
 .container {
@@ -51,7 +60,7 @@ body {
 }
 
 .content {
-  &--work {
+  &__work {
     display: flex;
     flex-direction: column;
     justify-content: center;

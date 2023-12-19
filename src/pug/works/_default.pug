@@ -6,19 +6,32 @@ html(lang="zh-TW")
   body
     .wrapper
       block header
-        include ../partials/works/_header.pug
+        include ../partials/_header.pug
 
       .container
         block content
-          .content.content--work
+          .content.content__work
             .summery-box
-              .summery-box--title
-                h1 Tonya's Works
-                h3 Welcome this design space
-            .work-item
-              .work-item--title aaas sdds ss
-              .work-item--content
-                img(src='/images/background-0.jpg')
+              .summery-box__title
+                h1 Hi, I'm Tonya
+                h3 Designer &amp; Developer.
+                p
+            .work-box
+              .work-item
+                .work-item__content
+                  img(src='/images/background-0.jpg')
+                .work-item__descrip
+                  .descrip__title Interactive Game Design
+                  .descrip__tool
+                    .tag GSAP
+                    .tag.tag-2 JS
+                    .tag.tag-3 Angular
+                    .tag.tag-4 Canvas
+                    .tag.tag-5 CSS3
+                    .tag.tag-6 SVG
+                    .tag.tag-7 SVG
+                    .tag.tag-8 SVG
 
       block footer
         include ../partials/_footer.pug
+      include ../partials/_float-tool.pug
