@@ -7,4 +7,29 @@
   .float-tool__switch {
 
   }
+
+  input.variation {
+    display: none;
+    + label {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      margin: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+      opacity: 0.7;
+      transition: opacity .3s ease-in;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+#themeBtn {
+	+ label {
+		background: linear-gradient(to left, var(--primary-gold) 50%, var(--wrapper-bg) 50%);
+	}
 }
