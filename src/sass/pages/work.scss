@@ -11,13 +11,13 @@
       font-size: 4rem;
       margin: 1rem 0 0 0;
       width: fit-content;
-      color: var(--color-title-primary);
+      color: var(--color-summery-title-primary);
       &::after {
         content: '';
         display: block;
         width: 100%;
         height: 1px;
-        background: var(--color-title-primary);
+        background: var(--color-summery-title-primary);
       }
     }
     h2 {

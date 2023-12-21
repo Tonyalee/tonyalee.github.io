@@ -2,7 +2,7 @@
 //   console.log('jQuery is working');
 // });
 
-// THEME
+//---------------------- THEME
 $("#themeBtn").on("click", function() {
   toggleTheme();
 });
@@ -29,3 +29,12 @@ if (localStorage.getItem('theme') === 'theme-dark') {
     setTheme('theme-light');
 }
 })();
+
+//---------------------- Redirect
+$('.linkHome').click(function(){
+  window.location.href='index.html';
+})
+
+$('.linkWorks').click(function(){
+  window.location.href='works.html';
+})
