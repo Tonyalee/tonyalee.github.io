@@ -60,11 +60,16 @@ body {
 }
 
 .content {
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   &__work {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
   }
 }
