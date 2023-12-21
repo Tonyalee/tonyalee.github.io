@@ -1,6 +1,31 @@
-extends ./works/_default.pug
+extends ./layout/_default.pug
 block variables
 	- var title = 'Tonya‘s Works'
 	- var prefix = FILE_PREFIX
 	//- - var extraCSS = [FILE_PREFIX+'css/carousel.css']
 	- var imgPrefixUrl = IMG_PREFIX_URL
+
+
+block content
+	.pcontent.content__work
+		.summery-box
+			.summery-box__title
+				h2 Hi, I'm
+				h1 Tonya Lee
+				h3 Designer x Developer
+				p
+		.work-box
+			.work-item
+				.work-item__content
+					img(src='/images/background-0.jpg')
+				.work-item__descrip
+					.descrip__title Interactive Game Design
+					.descrip__tool
+						.tag GSAP
+						.tag.tag-2 JS
+						.tag.tag-3 Angular
+						.tag.tag-4 Canvas
+						.tag.tag-5 CSS3
+						.tag.tag-6 SVG
+						.tag.tag-7 SVG
+						.tag.tag-8 SVG

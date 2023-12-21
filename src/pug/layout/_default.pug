@@ -1,0 +1,14 @@
+block variables
+doctype html
+html(lang="zh-TW")
+  head
+    include ../partials/_head.pug
+  body#body
+    .wrapper
+      include ../partials/_header.pug
+
+      .container
+        block content
+
+      include ../partials/_footer.pug
+      include ../partials/_float-tool.pug
