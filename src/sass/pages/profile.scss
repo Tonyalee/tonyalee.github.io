@@ -2,6 +2,10 @@
 //- profile page
 
 .content__profile {
+  &__section {
+
+  }
+
   &__sec1 {
     display: flex;
     justify-content: center;
@@ -9,6 +13,7 @@
     flex-direction: row;
     padding: 5rem 0;
   }
+
   &__sec2 {
     padding: 5rem 0;
   }
@@ -98,7 +103,6 @@
 
 
 //- .timeline-box
-
 .timeline-box {
   flex: 5;
   &__title {

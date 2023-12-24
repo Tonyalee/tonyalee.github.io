@@ -1,6 +1,17 @@
 footer.footer-work
-  //- .footer-work--text Nice to meet you !  My new friends.
-  .footer-work--copyright © 2023 tonyalee.github.io All Rights Reserved.
-    //- a(href='#') Privacy
-    //- |  ·
-    //- a(href='#') Terms
+  .footer-work__socialLinks.socialLinks
+    .socialLinks__text Find Me Here
+    ul.socialLinks__list
+      li.socialLinks__item.socialLinks__item--linkedin
+        a.socialLinks__link(href='https://www.linkedin.com/in/tonyaleetw/' target='_blank')
+          svg.svgSprite.svgSprite--icon_linkedin(viewbox='0 0 48 48')
+            use(xlink:href='/images/svg-sprite.svg#icon_linkedin')
+      li.socialLinks__item.socialLinks__item--medium
+        a.socialLinks__link(href='https://medium.com/@tonyaleelucky' target='_blank')
+          svg.svgSprite.svgSprite--icon_medium(viewbox='0 0 48 48')
+            use(xlink:href='/images/svg-sprite.svg#icon_medium')
+      li.socialLinks__item.socialLinks__item--github
+        a.socialLinks__link(href='https://github.com/Tonyalee' target='_blank')
+          svg.svgSprite.svgSprite--icon_github(viewbox='0 0 48 48')
+            use(xlink:href='/images/svg-sprite.svg#icon_github')
+  .footer-work__copyright © 2023 tonyalee.github.io All Rights Reserved.

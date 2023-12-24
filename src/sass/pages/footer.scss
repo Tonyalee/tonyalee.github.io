@@ -1,8 +1,8 @@
 .footer-work {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -11,11 +11,41 @@
   opacity: 0.7;
   line-height: 1.7em;
 
-  &--text {
 
+  &__socialLinks {
+    padding: 0 3rem;
   }
 
-  &--copyright {
+  &__copyright {
+    padding: 0 3rem;
+  }
+}
 
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    padding-right: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 8px;
+      a .svgSprite {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__item {
+    &--linkedin svg {
+      transform: translate(0, -2px);
+    }
   }
 }
