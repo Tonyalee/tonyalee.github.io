@@ -4,19 +4,19 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = (env, options) => {
-  // Test webpack 4.x pass enviroment variables
-  console.log('env = ', env);
-  console.log('options.mode = ', options.mode);
+module.exports = (env, argv) => {
+  // Test webpack 5.x pass enviroment variables
+  console.log('argv.mode = ' + argv.mode);
 
   // Pass variables in to pug files (https://www.npmjs.com/package/pug-html-loader)
   // - add 'options.data' in pug-html-loader to pass into pug
   // Pass variables into Sass/SCSS (https://www.npmjs.com/package/sass-loader#additionaldata)
   // - add 'options.additionalData' in sass-loader to pass variables
   const _gParams = {
-    FILE_PREFIX: (options.mode === 'production') ? '/dist/' : '/',
-    IMG_PREFIX_URL: (options.mode === 'production') ? 'https://tonyalee.github.io/' : '/'
+    FILE_PREFIX: (argv.mode === 'production') ? '/dist/' : '/',
+    IMG_PREFIX_URL: (argv.mode === 'production') ? 'https://tonyalee.github.io/' : '/'
   };
 
   var config = {
@@ -26,24 +26,14 @@ module.exports = (env, options) => {
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: './js/[name].js?[hash:8]'
+      filename: './js/[name].js?[chunkhash]'
     },
     devServer: {
+      static: {
+        directory: path.join(__dirname, 'public'),
+      },
       compress: true,
-      port: 3000,
-      stats: {
-        assets: true,
-        cached: false,
-        chunkModules: false,
-        chunkOrigins: false,
-        chunks: false,
-        colors: true,
-        hash: false,
-        modules: false,
-        reasons: false,
-        versions: false,
-        warnings: false
-      }
+      port: 9000,
     },
     module: {
       rules: [
@@ -53,7 +43,7 @@ module.exports = (env, options) => {
             {
               loader: 'html-loader',
               options: {
-                minimize: (options.mode === 'production') ? true : false
+                minimize: (argv.mode === 'production') ? true : false
               }
             },
             {
@@ -67,13 +57,13 @@ module.exports = (env, options) => {
         {
           test: /\.s[ac]ss$/i,
           use: [
-            'style-loader', // Creates `style` nodes from JS strings
+            MiniCssExtractPlugin.loader,
             'css-loader', // Translates CSS into CommonJS
             {
               loader: 'sass-loader',
               options: {
                 sourceMap: true,
-                additionalData: "$env: '" + options.mode + "'; $imgPrefix: '" + _gParams.IMG_PREFIX_URL + "';"
+                additionalData: "$env: '" + argv.mode + "'; $imgPrefix: '" + _gParams.IMG_PREFIX_URL + "';"
               }
             }
           ]
@@ -81,7 +71,7 @@ module.exports = (env, options) => {
         {
           test: /\.css$/i,
           use: [
-            'style-loader', // Creates `style` nodes from JS strings
+            MiniCssExtractPlugin.loader,
             'css-loader' // Translates CSS into CommonJS
           ]
         },
@@ -140,20 +130,23 @@ module.exports = (env, options) => {
         $: 'jquery',
         jQuery: 'jquery' //這邊以上是新增
       }),
-      // For single pug file
-      new HtmlWebpackPlugin({
-        template: './pug/index.pug',
-        filename: 'index.html',
-        inject: true,
-        chunks: ['index'],
-        minify: {
-          sortAttributes: true,
-          collapseWhitespace: false, // 折疊空白字元就是壓縮Html
-          collapseBooleanAttributes: true, // 折疊布林值属性，例:readonly checked
-          removeComments: true, // 移除註釋
-          removeAttributeQuotes: true // 移除屬性的引號
-        }
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].css',
       }),
+      // For single pug file
+      // new HtmlWebpackPlugin({
+      //   template: './pug/index.pug',
+      //   filename: 'index.html',
+      //   inject: true,
+      //   chunks: ['index'],
+      //   minify: {
+      //     sortAttributes: true,
+      //     collapseWhitespace: false, // 折疊空白字元就是壓縮Html
+      //     collapseBooleanAttributes: true, // 折疊布林值属性，例:readonly checked
+      //     removeComments: true, // 移除註釋
+      //     removeAttributeQuotes: true // 移除屬性的引號
+      //   }
+      // }),
     ]
   };
 
