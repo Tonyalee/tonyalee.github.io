@@ -11,8 +11,10 @@
     console.log('wwww',$(this).scrollTop());
     if ($(this).scrollTop() > offset) {
       $('.topLink').addClass('show');
+      $('.header-work').addClass('header-work--min');
     } else {
       $('.topLink').removeClass('show');
+      $('.header-work').removeClass('header-work--min');
     }
   });
 

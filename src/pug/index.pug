@@ -7,6 +7,83 @@ block variables
 
 
 block content
+	-
+		var tlist = [
+			{
+				id: '1',
+				companyName: 'NEUTEC',
+				headline: 'Senior Front-End Dynamic Designer',
+				date: 'May 2020 - Present · 3 yrs 8 mos',
+				type: 'Taipei Taiwan · Hybrid',
+				describe: 'XXXX',
+				content: [
+					'- Enhance 30% productivity by coaching the Design team using F2E tool Angular.',
+					'- Evaluate and recommend design solutions and help guide team decision making.',
+					'- Partner closely with engineering to design and build new features.',
+					'- Devoted to dynamic website development with new creative technology.',
+					'- Managed a dashboard project using the data visualization tool eCharts.',
+				],
+			},
+			{
+				id: '2',
+				companyName: 'Titansoft Pte Ltd',
+				headline: 'Interactive Web Designer',
+				date: 'Apr 2018 - Apr 2020 · 2 yrs 1 mo',
+				type: 'Taipei Taiwan',
+				describe: 'XXXX',
+				content: [
+					'- Create an Interactive Design to delight a game UI.',
+					'- Create a front-end Template System, in order to make periodical Champion page more efficiently',
+					'- Implement RWD Web Game UI by Using Html, Sass.',
+					'- Cooperate with developer by using Vue, Git to build a layout on front-end projects',
+					'- Debug with developer on front-end environment and notify the layout to achieve an ideal design layout.',
+					'- Helping UX reseacher to writing JS on GA platform to complete AB testing',
+				],
+			},
+			{
+				id: '3',
+				companyName: 'BenQ Corporation',
+				headline: 'UI/UX Designer',
+				date: 'Jun 2016 - Mar 2018 · 1 yr 10 mos',
+				type: 'Taipei Taiwan',
+				describe: 'XXXX',
+				content: [
+					'- Enhance 30% productivity by coaching the Design team using F2E tool Angular.',
+					'- Evaluate and recommend design solutions and help guide team decision making.',
+					'- Partner closely with engineering to design and build new features.',
+					'- Devoted to dynamic website development with new creative technology.',
+					'- Managed a dashboard project using the data visualization tool eCharts.',
+				],
+			},
+			{
+				id: '4',
+				companyName: 'Cite Publishers',
+				headline: 'Web Designer',
+				date: 'Apr 2014 - May 2016 · 2 yrs 2 mos',
+				type: 'Taipei Taiwan',
+				describe: 'XXXX',
+				content: [
+					'- Build RWD sites with PS/html/css',
+					'- Set guidelines for new membership platform',
+					'- Solve UX & UI challenges for usability',
+					'- Work with developer and PM on web projects',
+				],
+			},
+			{
+				id: '5',
+				companyName: 'En Jun International CO.,LTD.',
+				headline: 'Visual Designer',
+				date: 'Nov 2012 - Mar 2014 · 1 yr 5 mos',
+				type: 'Taipei Taiwan',
+				describe: 'XXXX',
+				content: [
+					'- Build RWD sites with PS/html/css',
+					'- Set guidelines for new membership platform',
+					'- Solve UX & UI challenges for usability',
+					'- Work with developer and PM on web projects',
+				],
+			},
+		];
 	.content.content__profile
 		.content__profile__section.content__profile__sec1
 			.summery-box.summery-box--left
@@ -27,6 +104,15 @@ block content
 				.timeline-box__title
 					h4 Skill &amp; Experience
 				.timeline-box__content
+					ui.timeline-list
+						each item, index in tlist
+							li(class='tl-list tl-list-' + item.id)
+								.tl-companyName #{item.companyName}
+								.tl-headline #{item.headline}
+								.tl-date #{item.date}
+								.tl-type #{item.type}
+								.tl-headline #{item.headline}
+								.tl-content #{item.content}
 
 
 		.content__profile__section.content__profile__sec3
