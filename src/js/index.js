@@ -5,3 +5,4 @@ import '../sass/main.scss';
 import './custom';
 
 import './gotop';
+import './svg-wave';

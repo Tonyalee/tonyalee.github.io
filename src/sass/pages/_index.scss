@@ -12,6 +12,21 @@
   text-shadow: none
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  z-index: 10;
+}
+ 
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bar);
+  // border: 3px solid blue;
+}
+
 
 .item-bg {
   background-image: url($imgPrefix+'images/background-0.jpg');
@@ -36,18 +51,18 @@ body {
   background-color: #000;
 }
 
-
-
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: var(--wrapper-bg);
   // background: linear-gradient(to right, rgb(30, 60, 114), rgb(42, 82, 152));
+
 }
 
 .container {
@@ -59,6 +74,7 @@ body {
   max-width: 1500px;
   min-height: 600px;
   margin: 100px 0 var(--footer-height) 0;
+  z-index: 2;
 }
 
 .content {

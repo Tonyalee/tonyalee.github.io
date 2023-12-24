@@ -1,0 +1,76 @@
+
+.svg-bg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  // background-color: #987659;
+  z-index: 1;
+
+  svg,.blur {
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .attracted {
+    z-index: -1;
+    --size: 40rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--size);
+    width: var(--size);
+    margin-left: calc(var(--size) * -0.5);
+    margin-top: calc(var(--size) * -0.5);
+    .blob {
+      height: 100%;
+      width: 100%;
+      background: var(--svg-bg-1);
+      border-radius: 50%;
+      animation: morph 5s linear infinite both alternate;
+    }
+  }
+
+  .repelled {
+    opacity: 0.7;
+    z-index: -1;
+    --size: 50rem;
+    position: absolute;
+    bottom: calc(var(--size) * -0.5);
+    right: calc(var(--size) * -0.5);
+    height: var(--size);
+    width: var(--size);
+    margin-left: calc(var(--size) * -0.5);
+    margin-top: calc(var(--size) * -0.5);
+
+    .blob {
+      height: 100%;
+      width: 100%;
+      background: var(--svg-bg-1);
+      border-radius: 50%;
+      animation: morph 7s linear infinite both alternate-reverse;
+    }
+  }
+
+  @keyframes morph {
+    0% {
+      transform: none;
+    }
+    50% {
+      transform: rotate(0.5turn) scale(1, 0.75);
+    }
+    100% {
+      transform: rotate(1turn) scale(0.75, 1);
+    }
+  }
+
+  .blur {
+    z-index: -1;
+    backdrop-filter: blur(12rem);
+  }
+}

@@ -8,7 +8,6 @@
 
   // Toggle view of button when scrolling.
   $('.wrapper').on('scroll',function(){
-    console.log('wwww',$(this).scrollTop());
     if ($(this).scrollTop() > offset) {
       $('.topLink').addClass('show');
       $('.header-work').addClass('header-work--min');
