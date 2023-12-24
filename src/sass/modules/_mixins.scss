@@ -60,3 +60,11 @@
       @content;
   }
 }
+
+@mixin hover-opacity {
+  opacity: 0.7;
+  transition: opacity .3s ease-in;
+  &:hover {
+    opacity: 1;
+  }
+}

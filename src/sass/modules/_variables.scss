@@ -26,6 +26,9 @@ $mobile-min:      480px;
   --color-text-tag: #222;
   --shadow-primary: rgb(202, 200, 199);
   --footer-height: 70px;
+  --footer-social-icon: #51504f;
+  --gotop-bg: rgba(0,0,0,.1);
+  --gotop-icon: var(--primary-gold);
   --theme-btn-border: #717067;
 }
 
@@ -40,5 +43,8 @@ $mobile-min:      480px;
   --color-text-tag: #222;
   --shadow-primary: #222;
   --footer-height: 70px;
+  --footer-social-icon: #fff;
+  --gotop-bg: rgba(0,0,0,.1);
+  --gotop-icon: var(--primary-gold);
   --theme-btn-border: #fff;
 }

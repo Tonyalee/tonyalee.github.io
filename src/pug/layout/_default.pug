@@ -12,3 +12,11 @@ html(lang="zh-TW")
 
       include ../partials/_footer.pug
       include ../partials/_float-tool.pug
+
+
+      //- go top
+      //- .gotop
+      a.topLink(href='#home')
+        svg.svgSprite.svgSprite--arrowLeft(viewbox='0 0 133 95')
+          use(xlink:href='/images/svg-sprite.svg#arrowLeft')
+        | UP

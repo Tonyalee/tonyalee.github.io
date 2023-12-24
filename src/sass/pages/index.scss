@@ -45,6 +45,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  overflow: auto;
   background-color: var(--wrapper-bg);
   // background: linear-gradient(to right, rgb(30, 60, 114), rgb(42, 82, 152));
 }
@@ -78,5 +79,40 @@ body {
 .gotop {
 
 }
+
+.topLink {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  right: -3rem;
+  bottom: calc(var(--footer-height) + 2rem);
+  background-color: var(--gotop-bg);
+  color: var(--gotop-icon);
+  line-height: inherit;
+  font-size: 1rem;
+  transform: rotate(90deg);
+  transform-origin: top right;
+  font-weight: 700;
+  padding: 6px 12px 6px 40px;
+  opacity: 0;
+  transition: all .5s ease-out;
+
+  &.show {
+    right: 3rem;
+    opacity: 1;
+  }
+
+  .svgSprite {
+    fill: var(--gotop-icon);
+    height: 12px;
+    width: auto;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .5s ease-out
+  }
+}
+
 
 //- Socila Network

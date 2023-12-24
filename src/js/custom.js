@@ -31,10 +31,10 @@ if (localStorage.getItem('theme') === 'theme-dark') {
 })();
 
 //---------------------- Redirect
-$('.linkHome').click(function(){
+$('.linkHome').on("click", function() {
   window.location.href='index.html';
 })
 
-$('.linkWorks').click(function(){
+$('.linkWorks').on("click", function() {
   window.location.href='works.html';
 })
