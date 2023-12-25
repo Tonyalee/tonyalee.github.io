@@ -13,13 +13,13 @@ document.addEventListener("mousemove", (e) => {
     {
       transform: `translate(${clientX}px, ${clientY}px)`
     },
-    { duration: 3000, fill: "forwards", easing: "ease-in" }
+    { duration: 2000, fill: "forwards", easing: "ease-in" }
   );
 
   repelled.animate(
     {
       transform: `translate(${-clientX}px, ${-clientY}px)`
     },
-    { duration: 7000, fill: "forwards", easing: "ease-in" }
+    { duration: 3000, fill: "forwards", easing: "ease-in" }
   );
 });

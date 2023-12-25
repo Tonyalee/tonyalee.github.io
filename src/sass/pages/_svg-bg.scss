@@ -19,7 +19,7 @@
 
   .attracted {
     z-index: -1;
-    --size: 40rem;
+    --size: 80rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -27,6 +27,7 @@
     width: var(--size);
     margin-left: calc(var(--size) * -0.5);
     margin-top: calc(var(--size) * -0.5);
+    opacity: 0.5;
     .blob {
       height: 100%;
       width: 100%;
@@ -37,9 +38,8 @@
   }
 
   .repelled {
-    opacity: 0.7;
     z-index: -1;
-    --size: 50rem;
+    --size: 80rem;
     position: absolute;
     bottom: calc(var(--size) * -0.5);
     right: calc(var(--size) * -0.5);
@@ -47,6 +47,7 @@
     width: var(--size);
     margin-left: calc(var(--size) * -0.5);
     margin-top: calc(var(--size) * -0.5);
+    opacity: 0.5;
 
     .blob {
       height: 100%;
@@ -71,6 +72,6 @@
 
   .blur {
     z-index: -1;
-    backdrop-filter: blur(12rem);
+    backdrop-filter: blur(5rem);
   }
 }
