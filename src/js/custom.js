@@ -38,3 +38,5 @@ $('.linkHome').on("click", function() {
 $('.linkWorks').on("click", function() {
   window.location.href='works.html';
 })
+
+//---------------------- Summary Bling cursor

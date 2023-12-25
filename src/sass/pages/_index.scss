@@ -62,15 +62,12 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 80%;
-  max-width: 1500px;
-  min-height: 600px;
-  margin: 100px 0 var(--footer-height) 0;
+  display: block;
+  width: 100%;
+  // min-height: 600px;
+  padding: 100px 0 var(--footer-height) 0;
   z-index: 2;
+  overflow: auto;
 }
 
 .content {
@@ -79,6 +76,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    max-width: 1500px;
+    margin: auto;
   }
   &__work {
     display: flex;

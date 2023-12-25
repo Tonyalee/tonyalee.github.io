@@ -7,7 +7,7 @@
   var duration = 500;
 
   // Toggle view of button when scrolling.
-  $('.wrapper').on('scroll',function(){
+  $('.container').on('scroll',function(){
     if ($(this).scrollTop() > offset) {
       $('.topLink').addClass('show');
       $('.header-work').addClass('header-work--min');
@@ -20,7 +20,7 @@
   // Scroll to top when button is clicked.
   $('.topLink').on('click',function(event) {
     event.preventDefault();
-    $('.wrapper').animate({
+    $('.container').animate({
       scrollTop: 0
     }, duration);
     return false;
