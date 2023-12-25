@@ -72,7 +72,7 @@ block content
 			},
 			{
 				id: '5',
-				companyName: 'En Jun International CO.,LTD.',
+				companyName: 'En Jun International CO., LTD.',
 				headline: 'Visual Designer',
 				date: 'Nov 2012 - Mar 2014 · 1 yr 5 mos',
 				type: 'Taipei Taiwan',
@@ -105,15 +105,18 @@ block content
 				.timeline-box__title
 					h4 Skill &amp; Experience
 				.timeline-box__content
-					ui.timeline-list
+					ul.timeline-box__list
 						each item, index in tlist
 							li(class='tl-list tl-list-' + item.id)
-								.tl-companyName #{item.companyName}
-								.tl-headline #{item.headline}
-								.tl-date #{item.date}
-								.tl-type #{item.type}
-								.tl-headline #{item.headline}
-								.tl-content #{item.content}
+								.tl-list__deco
+								.tl-list__wrap
+									.tl-list__headline #{item.headline}
+									.tl-list__companyName #{item.companyName}
+									.tl-list__date #{item.date}
+									.tl-list__type #{item.type}
+									.tl-list__content
+										each point, i in item.content
+											.tl-list__content__point #{point}
 
 
 		.content__profile__section.content__profile__sec3

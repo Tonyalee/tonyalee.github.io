@@ -68,3 +68,7 @@
     opacity: 1;
   }
 }
+
+@mixin font-highlight {
+  font-family: 'PT Serif', serif;
+}

@@ -17,11 +17,6 @@
   &__sec2 {
     padding: 5rem 0;
   }
-
-  h4 {
-    font-size: 2.5rem;
-    font-weight: 600;
-  }
 }
 
 //- .summery-box
@@ -33,7 +28,7 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    padding-left: 2rem;
+    padding: 0 0.5rem 0 3rem;
   }
   &--right {
     display: flex;
@@ -41,6 +36,7 @@
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding: 0 3rem 0 0.5rem;
   }
 
   &__photo {
@@ -74,6 +70,7 @@
       margin: 1rem 0 4.6rem 0;
       width: fit-content;
       color: var(--color-summery-title-primary);
+      @include font-highlight;
       &::after {
         content: '';
         display: block;
@@ -106,7 +103,93 @@
 //- .timeline-box
 .timeline-box {
   flex: 5;
-  &__title {
+  h4 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 2rem 0;
+  }
 
+  &__content {
+
+  }
+
+  &__list {
+  }
+}
+
+.tl-list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5em;
+
+  &__deco {
+    // position: absolute;
+    // top: 1rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem 5.8rem;
+    border-radius: 50%;
+    background-color: var(--tl-line);
+    flex: none;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      transform: translate(0.67rem, 0);
+      background-color: var(--tl-line);
+    }
+  }
+
+  &__wrap {
+    display: block;
+    // padding-left: 7rem;
+  }
+
+  &__companyName {
+    padding: 0.2rem 0;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+
+  &__headline {
+    padding: 0.2rem 0;
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: var(--tl-headline);
+  }
+  &__date {
+    display: inline-block;
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    
+  }
+  &__type {
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    border: 1px solid gray;
+    padding: 0.1rem 0.5rem;
+    margin: 0 0.8rem;
+    border-radius: 1rem;
+  }
+  &__content {
+    padding: 0.2rem 0;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &__point {
+      line-height: 1.3em;
+
+    }
   }
 }

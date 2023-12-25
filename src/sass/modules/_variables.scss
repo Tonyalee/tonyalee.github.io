@@ -24,6 +24,7 @@ $mobile-min:      480px;
   --light-contrary: #222;
   --light-contrary-100: #51504f;
   --light-gold: #af9155;
+  --light-gold-100: #b7ab96;
   --light-gold-500: #717067;
   //- COLOR
   --svg-bg-1: linear-gradient(#fbeed3, #d6be8f);
@@ -47,6 +48,8 @@ $mobile-min:      480px;
   --color-summery-title-second: var(--light-contrary-100);
   --color-text: var(--light-contrary-100);
   --color-text-tag: var(--light-contrary);
+  --tl-headline: var(--light-gold);
+  --tl-line: var(--light-gold-100);
   --shadow-primary: var(--light-primary-300);
   --footer-height: 70px;
   --footer-social-icon: var(--light-contrary-100);
@@ -64,6 +67,8 @@ $mobile-min:      480px;
   --dark-contrary: #fff;
   --dark-contrary-100: #eaeaea;
   --dark-gold: #c0a062;
+  --dark-gold-100: #544c3b;
+  --light-gold-500: #717067;
   //- COLOR
   --svg-bg-1: linear-gradient(#222, #5f533c);
   --scrollbar-bg: color-mix(
@@ -86,6 +91,8 @@ $mobile-min:      480px;
   --color-summery-title-second: var(--dark-contrary-100);
   --color-text: var(--dark-contrary-100);
   --color-text-tag: var(--dark-primary-100);
+  --tl-headline: var(--dark-gold);
+  --tl-line: var(--dark-gold-100);
   --shadow-primary: var(--dark-primary-100);
   --footer-height: 70px;
   --footer-social-icon: var(--dark-contrary);
