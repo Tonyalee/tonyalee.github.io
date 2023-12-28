@@ -35,42 +35,43 @@ li {
 
 body {
   display: block;
-  position: absolute;
+  position: relative;
   width: 100dvw;
-  height: 100dvh;
-  top: 0;
-  left: 0;
+  height: 100%;
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  // overflow: hidden;
   color: var(--color-text);
-  background-color: #000;
+  // background-color: #000;
+  background-color: var(--wrapper-bg);
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: var(--wrapper-bg);
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // position: relative;
+  // width: 100%;
+  // height: 100%;
+  // overflow: auto;
   // background: linear-gradient(to right, rgb(30, 60, 114), rgb(42, 82, 152));
-
+  position: relative;
+  z-index: 3;
 }
 
 .container {
   display: block;
   width: 100%;
-  // min-height: 600px;
-  // padding: 100px 0 var(--footer-height) 0;
+  height: 100%;
+  position: relative;
   z-index: 2;
   overflow: auto;
 }
 
 .content {
+    position: relative;
+  z-index: 2;
   padding: var(--header-height) 0 var(--footer-height) 0;
   &__profile {
     display: flex;

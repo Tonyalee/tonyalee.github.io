@@ -5,7 +5,7 @@
   const offset = 50;
   // Fade duration
   const duration = 500;
-  const screenHeight = document.querySelector(".container").offsetHeight;
+  const screenHeight = document.body.offsetHeight;
   const totalHeight = document.querySelector(".content").offsetHeight;
   const r = document.querySelector(':root');
 
