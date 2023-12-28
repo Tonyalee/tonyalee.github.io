@@ -11,7 +11,8 @@ $mobile-min:      480px;
 
 
 :root {
-
+  --header-height: 100px;
+  --footer-height: 70px;
 }
 
 
@@ -51,9 +52,10 @@ $mobile-min:      480px;
   --tl-headline: var(--light-gold);
   --tl-line: var(--light-gold-100);
   --shadow-primary: var(--light-primary-300);
-  --footer-height: 70px;
   --footer-social-icon: var(--light-contrary-100);
-  --gotop-bg: rgba(0,0,0,.1);
+  --gotop-bg: color-mix(
+    in oklab, var(--light-primary), transparent 40%
+  );
   --gotop-icon: var(--primary-gold);
   --theme-btn-border: var(--light-gold-500);
 }
@@ -94,9 +96,10 @@ $mobile-min:      480px;
   --tl-headline: var(--dark-gold);
   --tl-line: var(--dark-gold-100);
   --shadow-primary: var(--dark-primary-100);
-  --footer-height: 70px;
   --footer-social-icon: var(--dark-contrary);
-  --gotop-bg: rgba(0,0,0,.1);
+  --gotop-bg: color-mix(
+    in oklab, var(--dark-primary), transparent 40%
+  );
   --gotop-icon: var(--primary-gold);
   --theme-btn-border: var(--dark-contrary);
 }

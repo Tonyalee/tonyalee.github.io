@@ -18,6 +18,7 @@ h4 {
     align-items: center;
     flex-direction: row;
     padding: 5rem 0;
+    min-height: calc(90vh - 4rem);
     // cursor: url('/images/bling-4.png') 10 10, auto;
   }
 
@@ -194,4 +195,21 @@ h4 {
       line-height: 1.8em;
     }
   }
+}
+
+
+//- .rewards-box
+.rewards-box {
+  flex: 5;
+
+  &__content {
+
+  }
+
+  &__list {
+  }
+}
+
+.rw-list {
+  
 }

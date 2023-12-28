@@ -9,7 +9,7 @@ block variables
 
 block content
 	-
-		var tlist = [
+		var tlList = [
 			{
 				id: '1',
 				companyName: 'NEUTEC',
@@ -85,6 +85,51 @@ block content
 				],
 			},
 		];
+	-
+		var rwList = [
+			{
+				id: '1',
+				companyName: 'GOOGLE X COURSERA',
+				headline: 'Google Data Analytics Professional Certificate',
+				date: 'Sep 2021 - Oct 2023',
+				type: 'Online Course',
+				describe: 'XXXX',
+				content: [
+					'- Foundations: Data, Data, Everywhere.',
+					'- Ask Questions to Make Data-Driven Decisions.',
+					'- Prepare Data for Exploration.',
+					'- Process Data From Dirty to Clean.',
+				],
+			},
+			{
+				id: '2',
+				companyName: '​​悠識數位',
+				headline: '產品經理系列課程 – 產品數據分析與關鍵指標設計',
+				date: '2018/6/9',
+				type: 'Offline Course',
+				describe: 'XXXX',
+				content: [
+					'- Foundations: Data, Data, Everywhere.',
+					'- Ask Questions to Make Data-Driven Decisions.',
+					'- Prepare Data for Exploration.',
+					'- Process Data From Dirty to Clean.',
+				],
+			},
+			{
+				id: '3',
+				companyName: 'PIXNET',
+				headline: 'PIXNET Hackathon 2015',
+				date: '2015/8/1',
+				type: 'Hackathon',
+				describe: 'XXXX',
+				content: [
+					'- Foundations: Data, Data, Everywhere.',
+					'- Ask Questions to Make Data-Driven Decisions.',
+					'- Prepare Data for Exploration.',
+					'- Process Data From Dirty to Clean.',
+				],
+			},
+		];
 	.content.content__profile
 		.content__profile__section.content__profile__sec1
 			.summery-box.summery-box--left
@@ -102,12 +147,12 @@ block content
 
 		.content__profile__section.content__profile__sec2
 			.timeline-box
-				.timeline-box__title
-					h4 Skill &amp; Experience
+				.timeline-box__title.title
+					h4.split Skill &amp; Experience
 				.timeline-box__content
 					ul.timeline-box__list
-						each item, index in tlist
-							li(class='tl-list tl-list-' + item.id)
+						each item, index in tlList
+							li(class='stagger-item tl-list tl-list-' + item.id)
 								.tl-list__deco
 								.tl-list__wrap
 									.tl-list__headline #{item.headline}
@@ -122,5 +167,17 @@ block content
 		.content__profile__section.content__profile__sec3
 			.rewards-box
 				.rewards-box__title
-					h4 Rewards
+					h4 Honors &amp; Awards
 				.rewards-box__content
+					//- ul.rewards-box__list
+					//- 	each item, index in rwList
+					//- 		li(class='rw-list rw-list-' + item.id)
+					//- 			.rw-list__deco
+					//- 			.rw-list__wrap
+					//- 				.rw-list__headline #{item.headline}
+					//- 				.rw-list__companyName #{item.companyName}
+					//- 				.rw-list__date #{item.date}
+					//- 				.rw-list__type #{item.type}
+					//- 				.rw-list__content
+					//- 					each point, i in item.content
+					//- 						.rw-list__content__point #{point}

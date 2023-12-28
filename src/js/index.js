@@ -2,7 +2,8 @@ import '../sass/main.scss';
 // import 'bootstrap/dist/css/bootstrap.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.js';
 
-import './custom';
+import './_custom';
 
-import './gotop';
-import './svg-wave';
+import './_gotop';
+import './_svg-wave';
+import './_home';

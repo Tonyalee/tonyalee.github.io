@@ -65,12 +65,13 @@ body {
   display: block;
   width: 100%;
   // min-height: 600px;
-  padding: 100px 0 var(--footer-height) 0;
+  // padding: 100px 0 var(--footer-height) 0;
   z-index: 2;
   overflow: auto;
 }
 
 .content {
+  padding: var(--header-height) 0 var(--footer-height) 0;
   &__profile {
     display: flex;
     flex-direction: column;

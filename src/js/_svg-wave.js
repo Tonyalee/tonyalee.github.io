@@ -6,7 +6,7 @@ const attracted = document.querySelector(".attracted");
 const repelled = document.querySelector(".repelled");
 
 document.addEventListener("mousemove", (e) => {
-  console.log('mousemove', e.clientX);
+  // console.log('mousemove', e.clientX);
   const { clientX, clientY } = e;
 
   attracted.animate(
