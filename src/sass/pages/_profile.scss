@@ -19,13 +19,13 @@ h4 {
     flex-direction: row;
     padding: 5rem 0;
     min-height: calc(90vh - 4rem);
-    @include section-max;
+    @include section-max(80%);
     // cursor: url('/images/bling-4.png') 10 10, auto;
   }
 
   &__sec2 {
     padding: 5rem 0;
-    @include section-max;
+    @include section-max(65%);
   }
 
   &__sec3 {
@@ -44,8 +44,8 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
-    padding: 0 0.5rem 0 3rem;
+    flex: 1.1;
+    // padding: 0 1rem 0 2rem;
   }
   &--right {
     display: flex;
@@ -53,7 +53,7 @@ h4 {
     justify-content: center;
     align-items: center;
     flex: 1;
-    padding: 0 3rem 0 0.5rem;
+    padding: 0;
   }
 
   &__photo {
@@ -109,7 +109,7 @@ h4 {
     }
     p {
       line-height: 1.6em;
-      max-width: 80%;
+      max-width: 100%;
     }
   }
 

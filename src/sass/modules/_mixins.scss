@@ -73,7 +73,7 @@
   font-family: 'PT Serif', serif;
 }
 
-@mixin section-max {
-    width: 80%;
-    max-width: 1500px;
+@mixin section-max($percent) {
+    width: $percent;
+    max-width: 1200px;
 }

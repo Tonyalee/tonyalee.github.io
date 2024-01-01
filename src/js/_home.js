@@ -12,7 +12,7 @@ function initGASP() {
 
     let item = document.querySelectorAll('.stagger-item');
     gsap.set(item, {
-        yPercent: 50,
+        y: 100,
         opacity: 0,
     })
 }
@@ -27,7 +27,7 @@ function scrollGASP() {
             scroller: ".container",
             trigger: ".content__profile__sec2",
             // pin: true,
-            start: "top 50%",
+            start: "top 80%",
             end: "bottom bottom",
             scrub: 1,
             ease: 'linear',
@@ -39,7 +39,7 @@ function scrollGASP() {
     tlSec2.to(itemsSec2, {
         duration: 0.5,
         opacity: 1,
-        yPercent: 0,
+        y: 0,
         stagger: .5,
     })
 
@@ -49,7 +49,7 @@ function scrollGASP() {
             scroller: ".container",
             trigger: ".content__profile__sec3",
             // pin: true,
-            start: "top 50%",
+            start: "top 80%",
             end: "bottom bottom",
             scrub: 1,
             ease: 'linear',
@@ -61,7 +61,7 @@ function scrollGASP() {
     tlSec3.to(itemsSec3, {
         duration: 0.5,
         opacity: 1,
-        yPercent: 0,
+        y: 0,
         stagger: .5,
     })
 
