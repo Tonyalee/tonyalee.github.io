@@ -90,43 +90,54 @@ block content
 			{
 				id: '1',
 				companyName: 'GOOGLE X COURSERA',
-				headline: 'Google Data Analytics Professional Certificate',
+				headline: ['Google Data Analytics Professional Certification'],
 				date: 'Sep 2021 - Oct 2023',
 				type: 'Online Course',
 				describe: 'XXXX',
+				imgUrl: [
+					'/images/rewards/coursera-01.png',
+					'/images/rewards/coursera-02.png',
+					'/images/rewards/coursera-03.png',
+					'/images/rewards/coursera-04.png',
+				],
 				content: [
-					'- Foundations: Data, Data, Everywhere.',
-					'- Ask Questions to Make Data-Driven Decisions.',
-					'- Prepare Data for Exploration.',
-					'- Process Data From Dirty to Clean.',
+					'Foundations: Data, Data, Everywhere',
+					'Ask Questions to Make Data-Driven Decisions',
+					'Prepare Data for Exploration',
+					'Process Data From Dirty to Clean',
 				],
 			},
 			{
 				id: '2',
-				companyName: '​​悠識數位',
-				headline: '產品經理系列課程 – 產品數據分析與關鍵指標設計',
+				companyName: 'Userxper (悠識數位)',
+				headline: ['Product Management Series', 'Product Data Analysis and Key Performance Indicator (KPI) Design'],
 				date: '2018/6/9',
 				type: 'Offline Course',
 				describe: 'XXXX',
+				imgUrl: [
+					'/images/rewards/userxper.jpg',
+				],
 				content: [
-					'- Foundations: Data, Data, Everywhere.',
-					'- Ask Questions to Make Data-Driven Decisions.',
-					'- Prepare Data for Exploration.',
-					'- Process Data From Dirty to Clean.',
+					'Strategic Insights : Leveraging Product Data for Business Growth',
+					'Optimizing Operations : Applying Robust Data Analysis Frameworks',
+					'Metrics Mastery : Practical Approaches to Effective Data Analysis in Workshops',
 				],
 			},
 			{
 				id: '3',
 				companyName: 'PIXNET',
-				headline: 'PIXNET Hackathon 2015',
+				headline: ['PIXNET Hackathon 2015'],
 				date: '2015/8/1',
 				type: 'Hackathon',
 				describe: 'XXXX',
+				imgUrl: [
+					'/images/rewards/pixnet.jpg',
+				],
 				content: [
-					'- Foundations: Data, Data, Everywhere.',
-					'- Ask Questions to Make Data-Driven Decisions.',
-					'- Prepare Data for Exploration.',
-					'- Process Data From Dirty to Clean.',
+					'Foundations: Data, Data, Everywhere',
+					'Ask Questions to Make Data-Driven Decisions',
+					'Prepare Data for Exploration',
+					'Process Data From Dirty to Clean',
 				],
 			},
 		];
@@ -154,30 +165,36 @@ block content
 						each item, index in tlList
 							li(class='stagger-item tl-list tl-list-' + item.id)
 								.tl-list__deco
-								.tl-list__wrap
-									.tl-list__headline #{item.headline}
-									.tl-list__companyName #{item.companyName}
-									.tl-list__date #{item.date}
-									.tl-list__type #{item.type}
-									.tl-list__content
+								.tl-list__wrap.list
+									.list__headline #{item.headline}
+									.list__companyName #{item.companyName}
+									.list__date #{item.date}
+									.list__type #{item.type}
+									.list__content
 										each point, i in item.content
-											.tl-list__content__point #{point}
+											.list__content__point #{point}
 
 
-		//- .content__profile__section.content__profile__sec3
-		//- 	.rewards-box
-		//- 		.rewards-box__title
-		//- 			h4 Honors &amp; Awards
-		//- 		.rewards-box__content
-					//- ul.rewards-box__list
-					//- 	each item, index in rwList
-					//- 		li(class='rw-list rw-list-' + item.id)
-					//- 			.rw-list__deco
-					//- 			.rw-list__wrap
-					//- 				.rw-list__headline #{item.headline}
-					//- 				.rw-list__companyName #{item.companyName}
-					//- 				.rw-list__date #{item.date}
-					//- 				.rw-list__type #{item.type}
-					//- 				.rw-list__content
-					//- 					each point, i in item.content
-					//- 						.rw-list__content__point #{point}
+		.content__profile__section.content__profile__sec3.highlight-bg
+			.rewards-box
+				.rewards-box__title
+					h4 Honors &amp; Awards
+				.rewards-box__content
+					ul.rewards-box__list
+						each item, index in rwList
+							li(class='stagger-item rw-list rw-list-' + item.id)
+								.rw-list__pic
+									each itemImg, indexImg in item.imgUrl
+										.rw-list__pic__img
+											img(src=itemImg)
+								.rw-list__wrap.list
+									each itemheadline in item.headline
+										.list__headline #{itemheadline}
+									i - - - - - - - - - - - - - - - - - - - -   
+									.list__companyName #{item.companyName}
+									.list__date #{item.date}
+									.list__type #{item.type} <br>
+									i - - - - - - - - - - - - - - - - - - - -   
+									.list__content
+										each point, i in item.content
+											.list__content__point #{point}

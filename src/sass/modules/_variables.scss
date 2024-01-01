@@ -27,6 +27,7 @@ $mobile-min:      480px;
   --light-gold: #af9155;
   --light-gold-100: #b7ab96;
   --light-gold-500: #717067;
+  --light-gold-900: #b89d6e;
   //- COLOR
   --svg-bg-1: linear-gradient(#fbeed3, #d6be8f);
   --scrollbar-bg: color-mix(
@@ -48,9 +49,19 @@ $mobile-min:      480px;
   --color-summery-title-primary: var(--light-gold);
   --color-summery-title-second: var(--light-contrary-100);
   --color-text: var(--light-contrary-100);
+  --color-text-border: color-mix(
+    in oklab, var(--light-contrary-100), transparent 50%
+  );
   --color-text-tag: var(--light-contrary);
   --tl-headline: var(--light-gold);
   --tl-line: var(--light-gold-100);
+  //- rewards
+  --rw-headline: var(--light-primary);
+  --rewards-text: var(--light-primary);
+  --rewards-text-border: color-mix(
+    in oklab, var(--light-primary), transparent 50%
+  );
+  --rewards-section-bg: var(--light-gold-900);
   --shadow-primary: var(--light-primary-300);
   --footer-social-icon: var(--light-contrary-100);
   --gotop-bg: color-mix(
@@ -71,6 +82,7 @@ $mobile-min:      480px;
   --dark-gold: #c0a062;
   --dark-gold-100: #544c3b;
   --light-gold-500: #717067;
+  --light-gold-900: #b89d6e;
   //- COLOR
   --svg-bg-1: linear-gradient(#222, #5f533c);
   --scrollbar-bg: color-mix(
@@ -92,9 +104,19 @@ $mobile-min:      480px;
   --color-summery-title-primary: var(--dark-gold);
   --color-summery-title-second: var(--dark-contrary-100);
   --color-text: var(--dark-contrary-100);
+  --color-text-border: color-mix(
+    in oklab, var(--dark-contrary-100), transparent 50%
+  );
   --color-text-tag: var(--dark-primary-100);
   --tl-headline: var(--dark-gold);
   --tl-line: var(--dark-gold-100);
+  //- rewards
+  --rw-headline: var(--dark-primary);
+  --rewards-text: var(--dark-primary-100);
+  --rewards-text-border: color-mix(
+    in oklab, var(--dark-primary), transparent 50%
+  );
+  --rewards-section-bg: var(--dark-gold-900);
   --shadow-primary: var(--dark-primary-100);
   --footer-social-icon: var(--dark-contrary);
   --gotop-bg: color-mix(

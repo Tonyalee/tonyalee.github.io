@@ -18,11 +18,11 @@ function initGASP() {
 }
 
 function scrollGASP() {
-    let item = document.querySelectorAll('.stagger-item');
+    let itemsSec2 = document.querySelectorAll('.content__profile__sec2 .stagger-item');
     let title = document.querySelectorAll('.title');
     gsap.registerPlugin(ScrollTrigger);
 
-    const tl = gsap.timeline({
+    const tlSec2 = gsap.timeline({
         scrollTrigger: {
             scroller: ".container",
             trigger: ".content__profile__sec2",
@@ -35,13 +35,36 @@ function scrollGASP() {
             // markers: true
             }
     })
-    console.log(tl);
-    tl.to(item, {
+    // console.log(tlSec2);
+    tlSec2.to(itemsSec2, {
         duration: 0.5,
         opacity: 1,
         yPercent: 0,
         stagger: .5,
     })
+
+    let itemsSec3 = document.querySelectorAll('.content__profile__sec3 .stagger-item');
+    const tlSec3 = gsap.timeline({
+        scrollTrigger: {
+            scroller: ".container",
+            trigger: ".content__profile__sec3",
+            // pin: true,
+            start: "top 50%",
+            end: "bottom bottom",
+            scrub: 1,
+            ease: 'linear',
+            toggleActions: "restart none none reverse",
+            markers: true
+            }
+    })
+    // console.log(tl);
+    tlSec3.to(itemsSec3, {
+        duration: 0.5,
+        opacity: 1,
+        yPercent: 0,
+        stagger: .5,
+    })
+
 
 
     ScrollTrigger.addEventListener("scrollStart", function() {
@@ -54,6 +77,6 @@ function scrollGASP() {
     //     console.log('scrollEnd');
     //     tl.reverse();
     // });
-    console.log('ScrollTrigger', ScrollTrigger.isScrolling());
+    // console.log('ScrollTrigger', ScrollTrigger.isScrolling());
 
 }

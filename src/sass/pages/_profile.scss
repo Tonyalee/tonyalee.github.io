@@ -1,5 +1,5 @@
 
-//- profile page
+//------------------- profile page
 
 h4 {
   font-size: 2.5rem;
@@ -19,11 +19,20 @@ h4 {
     flex-direction: row;
     padding: 5rem 0;
     min-height: calc(90vh - 4rem);
+    @include section-max;
     // cursor: url('/images/bling-4.png') 10 10, auto;
   }
 
   &__sec2 {
     padding: 5rem 0;
+    @include section-max;
+  }
+
+  &__sec3 {
+    padding: 5rem 0;
+    width: 100%;
+    color: var(--rewards-text);
+    background: var(--rewards-section-bg);
   }
 }
 
@@ -107,6 +116,66 @@ h4 {
 
 }
 
+//- .list 
+
+.list {
+  &__companyName {
+    padding: 0.2rem 0;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+
+  &__headline {
+    padding: 0.2rem 0;
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: var(--tl-headline);
+  }
+  &__date {
+    display: inline-block;
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    opacity: 0.8;
+  }
+
+  &__type {
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    border: 1px solid var(--color-text-border);
+    padding: 0.1rem 0.5rem;
+    margin: 0 0.8rem;
+    border-radius: 1rem;
+    opacity: 0.8;
+
+    .highlight-bg & {
+      border: 1px solid var(--rewards-text-border);
+    }
+  }
+
+  &__type {
+
+  }
+
+  &__content {
+    padding: 1rem 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+
+    &__point {
+      font-size: 1rem;
+      line-height: 1.8em;
+    }
+  }
+
+  i {
+    display: block;
+    padding: 0.5rem;
+  }
+}
+
 
 //- .timeline-box
 .timeline-box {
@@ -154,53 +223,19 @@ h4 {
     display: block;
     // padding-left: 7rem;
   }
-
-  &__companyName {
-    padding: 0.2rem 0;
-    font-size: 1rem;
-    line-height: 1.5em;
-  }
-
-  &__headline {
-    padding: 0.2rem 0;
-    font-size: 1.3rem;
-    line-height: 1.5em;
-    font-weight: 700;
-    color: var(--tl-headline);
-  }
-  &__date {
-    display: inline-block;
-    padding: 0.2rem 0;
-    font-size: 0.8rem;
-    line-height: 1.5em;
-    opacity: 0.8;
-  }
-  &__type {
-    display: inline-block;
-    font-size: 0.8rem;
-    line-height: 1.5em;
-    border: 1px solid gray;
-    padding: 0.1rem 0.5rem;
-    margin: 0 0.8rem;
-    border-radius: 1rem;
-    opacity: 0.8;
-  }
-  &__content {
-    padding: 0.5rem 0;
-    display: flex;
-    flex-direction: column;
-
-    &__point {
-      font-size: 1rem;
-      line-height: 1.8em;
-    }
-  }
 }
-
 
 //- .rewards-box
 .rewards-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 5;
+
+  &__title {
+    text-align: center;
+  }
 
   &__content {
 
@@ -208,8 +243,68 @@ h4 {
 
   &__list {
   }
+
+
 }
 
 .rw-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 2rem 0;
+  text-align: center;
+  min-height: 80vh;
+
+  &-1 {
+    .rw-list__pic {
+      display: grid;
+      grid-template-columns: repeat(2, 320px);
+      gap: 20px;
+    }
+  }
+
+  &-2 {
+    .rw-list__pic {
+      &__img {
+        max-width: 500px;
+      }
+    }
+  }
+
+  &-3 {
+    .rw-list__pic {
+      &__img {
+        max-width: 360px;
+      }
+    }
+  }
+
+  &__pic + &__wrap {
+    padding-bottom: 1rem;
+
+  }
+
+  &__pic {
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__wrap {
+    
+  }
+
+
+  .list__headline {
+    padding: 0.2rem 0;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: var(--rw-headline);
+  }
   
 }

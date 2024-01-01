@@ -72,3 +72,8 @@
 @mixin font-highlight {
   font-family: 'PT Serif', serif;
 }
+
+@mixin section-max {
+    width: 80%;
+    max-width: 1500px;
+}
