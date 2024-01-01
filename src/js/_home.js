@@ -54,7 +54,7 @@ function scrollGASP() {
             scrub: 1,
             ease: 'linear',
             toggleActions: "restart none none reverse",
-            markers: true
+            // markers: true
             }
     })
     // console.log(tl);
