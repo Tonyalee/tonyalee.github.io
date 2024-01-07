@@ -36,13 +36,40 @@
     display: flex;
     justify-content: center;
     li {
+      position: relative;
       padding: 0.8rem;
-      @include hover-opacity;
+      // @include hover-opacity;
 
-      a .svgSprite {
-        width: 24px;
-        height: 24px;
-        fill: var(--footer-social-icon);
+      &:hover {
+        &::before {
+          transform: translate(-50%,-50%) scale(1);
+          opacity: 1;
+        } 
+      }
+
+      &::before {
+        content: "";
+        background-color: var(--footer-social-icon-bg);
+        border-radius: 20px;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 0;
+        transition: transform 300ms, opacity 200ms;
+        z-index: 1;
+      }
+
+      a {
+        position: relative;
+        z-index: 2;
+        .svgSprite {
+          width: 24px;
+          height: 24px;
+          fill: var(--footer-social-icon);
+        }
       }
     }
   }
