@@ -1,0 +1,22 @@
+block variables
+doctype html
+html(lang="zh-TW")
+  head
+    include ../partials/_head.pug
+  body#body
+    .svg-bg
+      include ../partials/_svg-bg.pug
+    .wrapper
+      include ../partials/_header.pug
+      include ../partials/_footer.pug
+      include ../partials/_float-tool.pug
+
+    .container
+      block content
+
+    //- go top
+    //- .gotop
+    a.topLink(href='#home')
+      svg.svgSprite.svgSprite--arrowLeft(viewbox='0 0 133 95')
+        use(xlink:href='/images/svg-sprite.svg#arrowLeft')
+      | UP

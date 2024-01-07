@@ -1,0 +1,13 @@
+extends ./layout/_works.pug
+block variables
+	- var title = 'Tonya‘s Works'
+	- var prefix = FILE_PREFIX
+	//- - var extraCSS = [FILE_PREFIX+'css/carousel.css']
+	- var imgPrefixUrl = IMG_PREFIX_URL
+
+
+block content
+	.content.content__work
+		include ./page/_data.pug
+
+		
