@@ -7,7 +7,7 @@ body {
   min-height: 100%;
   font-family: 'Nunito Sans', sans-serif;
   color: #545454;
-  background-color: #fff;
+  background-color: var(--wrapper-item-bg);
 }
 
 html {

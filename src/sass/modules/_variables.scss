@@ -17,7 +17,7 @@ $mobile-min:      480px;
 
 
 .theme-light {
-  //- BASE
+  //- BASE COLOR
   --light-primary: #fff;
   --light-primary-100: #eaeaea;
   --light-primary-200: #f5f5f5;
@@ -28,7 +28,7 @@ $mobile-min:      480px;
   --light-gold-100: #b7ab96;
   --light-gold-500: #717067;
   --light-gold-900: #b89d6e;
-  //- COLOR
+  //- ELEMENT COLOR
   --svg-bg-1: linear-gradient(#fbeed3, #d6be8f);
   --scrollbar-bg: color-mix(
     in oklab, var(--light-gold), transparent 90%
@@ -72,7 +72,7 @@ $mobile-min:      480px;
 }
 
 .theme-dark {
-  //- BASE
+  //- BASE COLOR
   --dark-primary: #000;
   --dark-primary-100: #222;
   --dark-primary-200: #212121;
@@ -83,7 +83,7 @@ $mobile-min:      480px;
   --dark-gold-100: #544c3b;
   --light-gold-500: #717067;
   --light-gold-900: #b89d6e;
-  //- COLOR
+  //- ELEMENT COLOR
   --svg-bg-1: linear-gradient(#222, #5f533c);
   --scrollbar-bg: color-mix(
     in oklab, var(--dark-gold), transparent 70%
@@ -111,10 +111,10 @@ $mobile-min:      480px;
   --tl-headline: var(--dark-gold);
   --tl-line: var(--dark-gold-100);
   //- rewards
-  --rw-headline: var(--dark-primary);
-  --rewards-text: var(--dark-primary-100);
+  --rw-headline: var(--dark-gold);
+  --rewards-text: var(--dark-contrary);
   --rewards-text-border: color-mix(
-    in oklab, var(--dark-primary), transparent 50%
+    in oklab, var(--dark-contrary), transparent 50%
   );
   --rewards-section-bg: var(--dark-gold-900);
   --shadow-primary: var(--dark-primary-100);
