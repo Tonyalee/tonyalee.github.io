@@ -32,7 +32,7 @@
 }
 
 .show-item {
-  display: block;
+  display: flex;
   margin: auto;
   position: relative;
 
@@ -56,15 +56,27 @@
     overflow: hidden;
   }
 
+  &__descrip {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 5rem 3rem;
+    text-wrap: nowrap;
+  }
+
   &.item1 {
+    flex-direction: row-reverse;
     width: 70%;
     left: 20%;
   }
   &.item2 {
+    flex-direction: row;
     width: 60%;
     right: 20%;
   }
   &.item3 {
+    flex-direction: row-reverse;
     width: 70%;
     left: 20%;
   }

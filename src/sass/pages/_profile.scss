@@ -293,9 +293,6 @@ h4 {
       grid-template-columns: 300px 300px;
       grid-template-rows: auto;
       gap: 20px;
-      // &__img {
-      //   max-width: 360px;
-      // }
       .rw-list__pic__img:nth-child(1) {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -317,7 +314,11 @@ h4 {
   }
 
   &__pic {
-
+    &__img {
+      border-radius: 0.8rem;
+      overflow: hidden;
+    }
+  
     img {
       display: block;
       width: 100%;
