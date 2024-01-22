@@ -1,6 +1,78 @@
 
-//- works page
 
+
+
+//- intro
+
+.intro-box {
+  width: 70%;
+  max-width: 500px;
+  padding: 5rem 0;
+  text-align: center;
+  &__title {
+      font-size: 2.5em;
+      margin: 1rem 0;
+      letter-spacing: 2px;
+      line-height: 1.5em;
+  }
+
+  &__text {
+    line-height: 2em;
+    max-width: 100%;
+  }
+}
+
+//- show page
+
+.show-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.show-item {
+  display: block;
+  margin: auto;
+  position: relative;
+
+  & + .show-item {
+    margin-top: 10rem;
+  }
+  
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    transition: all .3s ease-in;
+  }
+
+  &__content {
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  &.item1 {
+    width: 70%;
+    left: 20%;
+  }
+  &.item2 {
+    width: 60%;
+    right: 20%;
+  }
+  &.item3 {
+    width: 70%;
+    left: 20%;
+  }
+}
+
+
+
+//- works page
 
 .work-box {
   flex: 1;

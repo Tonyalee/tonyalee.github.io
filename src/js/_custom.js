@@ -48,5 +48,8 @@ $('.linkGame').on("click", function() {
 $('.linkData').on("click", function() {
   window.location.href='data.html';
 })
+$('.linkBranding').on("click", function() {
+  window.location.href='branding.html';
+})
 
 //---------------------- Summary Bling cursor

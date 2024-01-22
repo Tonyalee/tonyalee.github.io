@@ -70,7 +70,26 @@
 }
 
 @mixin font-highlight {
-  font-family: 'PT Serif', serif;
+  // font-family: "Averta-Regular";
+  font-family: "Averta-bold",sans-serif;
+  font-weight: 800;
+  // color: rgba(0,0,0,0);
+  // -webkit-text-stroke: 1px var(--color-summery-title-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  // font-family: 'PT Serif', serif;
+}
+
+@mixin font-highlight-stroke {
+  // font-family: "Averta-Regular";
+  font-family: "Averta",sans-serif;
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 1px var(--color-summery-title-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  // font-family: 'PT Serif', serif;
 }
 
 @mixin section-max($percent) {
