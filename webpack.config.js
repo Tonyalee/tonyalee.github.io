@@ -68,13 +68,13 @@ module.exports = (env, argv) => {
             }
           ]
         },
-        {
-          test: /\.css$/i,
-          use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader' // Translates CSS into CommonJS
-          ]
-        },
+        // {
+        //   test: /\.css$/i,
+        //   use: [
+        //     MiniCssExtractPlugin.loader,
+        //     'css-loader' // Translates CSS into CommonJS
+        //   ]
+        // },
         {
           test: /\.js$/,
           use: {

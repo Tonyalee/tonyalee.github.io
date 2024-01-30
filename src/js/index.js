@@ -7,3 +7,4 @@ import './_custom';
 import './_gotop';
 import './_svg-wave';
 import './_home';
+import './_slider';

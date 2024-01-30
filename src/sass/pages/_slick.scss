@@ -1,0 +1,32 @@
+
+.sl-sec {
+    display: block;
+    position: relative;
+    width: 80%;
+    height: auto;
+    overflow: visible;
+
+    .slick-slide > div {
+        display: block;
+        position: relative;
+    }
+
+    &--box {
+        display: inline-block;
+        width: 300px;
+        height: auto;
+        color: #333;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .sl-box-content {
+        margin: 10px;
+        padding: 10px;
+        background-color: #eaeaea;
+    }
+}
+
+.slick-slide {
+    background: transparent;
+}

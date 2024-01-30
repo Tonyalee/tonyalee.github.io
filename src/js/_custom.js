@@ -1,7 +1,3 @@
-// $('#myCarousel').on('click', () => {
-//   console.log('jQuery is working');
-// });
-
 //---------------------- THEME
 $("#themeBtn").on("click", function() {
   toggleTheme();
