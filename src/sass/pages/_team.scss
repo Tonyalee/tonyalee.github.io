@@ -1,0 +1,38 @@
+
+.team-box {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0;
+
+    &__descrip {
+    }
+
+    .descrip {
+        &__box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__slide {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        gap: 20px;
+        
+    }
+}
+
+.slide_item {
+    
+    img {
+        width: 100%;
+    }
+}

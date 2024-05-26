@@ -44,6 +44,9 @@ $('.linkGame').on("click", function() {
 $('.linkData').on("click", function() {
   window.location.href='data.html';
 })
+$('.linkTeam').on("click", function() {
+  window.location.href='team.html';
+})
 $('.linkBranding').on("click", function() {
   window.location.href='branding.html';
 })
