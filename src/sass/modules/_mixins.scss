@@ -96,3 +96,12 @@
     width: $percent;
     max-width: 1200px;
 }
+
+
+@function custom-transparentize($color, $percent) {
+  $formated-percent: $percent;
+  @if (unit($percent) != '%') {
+    $formated-percent: percentage($percent);
+  }
+  @return color-mix(in srgb, #{$color}, transparent (100% - $formated-percent));
+}

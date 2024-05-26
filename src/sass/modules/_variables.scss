@@ -70,6 +70,8 @@ $mobile-min:      480px;
   );
   --gotop-icon: var(--primary-gold);
   --theme-btn-border: var(--light-gold-500);
+  --slide-item-bg:  var(--light-gold-500);
+  --slide-arrow-bg: var(--primary-gold);
 }
 
 .theme-dark {
@@ -126,4 +128,6 @@ $mobile-min:      480px;
   );
   --gotop-icon: var(--primary-gold);
   --theme-btn-border: var(--dark-contrary);
+  --slide-item-bg:  var(--dark-gold-500);
+  --slide-arrow-bg: var(--primary-gold);
 }
