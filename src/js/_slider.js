@@ -1,6 +1,6 @@
 import slick from 'slick-carousel';
 
-$(".center").slick({
+$(".slider").slick({
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 1,

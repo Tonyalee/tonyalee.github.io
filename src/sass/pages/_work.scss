@@ -80,6 +80,7 @@
     width: 70%;
     left: 20%;
   }
+
 }
 
 
@@ -110,6 +111,13 @@
       padding: 1rem 7rem 1rem 1rem;
     }
   }
+
+  &--center {
+    #{$this}__descrip {
+      padding: 1rem;
+    }
+  }
+
 
   &__descrip {
     max-width: 500px;

@@ -1,4 +1,18 @@
 
+
+
+.slick-item {
+    text-align: center;
+
+    // .descrip__title,
+    .descrip__list {
+        text-align: left;
+    }
+    .descrip__box + .descrip__box {
+        padding: 0 0 2rem 0;
+    }
+}
+
 .sl-sec {
     display: block;
     position: relative;
