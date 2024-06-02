@@ -1,7 +1,6 @@
 
 //---------------------- GO TO PAGE
 (function () {
-  // Amount of scrolling before button is shown/hidden.
   const pages = [
     '/index.html',
     '/uiux.html',
