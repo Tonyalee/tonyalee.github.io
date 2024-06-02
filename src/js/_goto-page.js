@@ -19,10 +19,13 @@
     '.header-work-content__item.linkBranding',
   ]
 
-  let currentIdx = pages.findIndex((page) => page === location.pathname);
-
+  let currentIdx = pages.findIndex((page) => page === location.pathname);  
+  if (currentIdx === -1){
+    currentIdx = 0;
+  }
+  
   let header = document.querySelector(headerClass[currentIdx]);
-  header.classList.add('active');
+  header && header.classList?.add('active');
   
   function switchPage(idx) {
     if (idx > 5) {
