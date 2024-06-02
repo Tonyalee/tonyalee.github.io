@@ -57,7 +57,6 @@ function scrollGASP() {
             // markers: true
             }
     })
-    // console.log(tl);
     tlSec3.to(itemsSec3, {
         duration: 0.5,
         opacity: 1,
@@ -65,14 +64,11 @@ function scrollGASP() {
         stagger: .5,
     })
 
-
-
-    ScrollTrigger.addEventListener("scrollStart", function() {
-
-    console.log('scrollStart ScrollTrigger', ScrollTrigger.isScrolling());
+    // ScrollTrigger.addEventListener("scrollStart", function() {
+    //    console.log('scrollStart ScrollTrigger', ScrollTrigger.isScrolling());
     //     console.log('scrollStart');
     //     tl.play();
-    });
+    // });
     // ScrollTrigger.addEventListener("scrollEnd", function() {
     //     console.log('scrollEnd');
     //     tl.reverse();

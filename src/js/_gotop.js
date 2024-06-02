@@ -12,8 +12,6 @@
   // Toggle view of button when scrolling.
   $('.container').on('scroll',function(){
 
-    // console.log('screenHeight', screenHeight, 'and totalHeight', totalHeight)
-    // console.log('$(this).scrollTop()', $(this).scrollTop())
     //- header
     if ($(this).scrollTop() > offset) {
       $('.header-work').addClass('header-work--min');
@@ -26,11 +24,6 @@
     } else {
       $('.topLink').removeClass('show');
     }
-    // if ($(this).scrollTop() > (totalHeight - 612)) {
-    //   r.style.setProperty('--footer-height', '120px');
-    // } else {
-    //   r.style.setProperty('--footer-height', '60px');
-    // }
   });
 
   // Scroll to top when button is clicked.
