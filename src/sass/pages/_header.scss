@@ -82,8 +82,20 @@
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
+    
+    &.active {
+      .header-work-content__text {
+        color: var(--wrapper-bg);
 
-
+        &::before {
+          opacity: 1;
+        }
+        // &::after {
+        //   width: 100%;
+        // }
+      }
+    }
+  
     &:hover {
       .header-work-content__text {
         color: var(--wrapper-bg);
