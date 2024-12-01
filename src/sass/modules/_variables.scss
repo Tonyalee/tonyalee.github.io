@@ -44,6 +44,9 @@ $mobile-min:      480px;
   --header-bg-min: color-mix(
     in oklab, var(--light-primary), transparent 40%
   );
+  --header-bg-full: color-mix(
+    in oklab, var(--light-primary-200), transparent 5%
+  );
   --wrapper-item-bg: var(--light-primary-200);
   --primary-gold: var(--light-gold);
   --primary-gold-gred: linear-gradient(to right, var(--light-gold) 70%, rgba(0,0,0, 0) 100%);
@@ -101,6 +104,12 @@ $mobile-min:      480px;
   );
   --header-bg-min: color-mix(
     in oklab, var(--dark-primary), transparent 40%
+  );
+  --header-bg-full: color-mix(
+    in oklab, var(--dark-primary-200), transparent 5%
+  );
+  --menu-close-btn-bg: color-mix(
+    in oklab, var(--dark-primary), transparent 70%
   );
   --wrapper-item-bg: var(--dark-primary-300);
   --primary-gold: var(--dark-gold);

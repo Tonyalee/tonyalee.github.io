@@ -5,6 +5,7 @@ import '../sass/main.scss';
 import './_custom';
 
 import './_goto-page';
+import './_menu';
 import './_gotop';
 import './_svg-wave';
 import './_home';

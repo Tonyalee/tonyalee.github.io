@@ -11,19 +11,31 @@
 
   // Toggle view of button when scrolling.
   $('.container').on('scroll',function(){
+    const scrollPosition = $(this).scrollTop();
+    const containerHeight = $(this).height();
+    const contentHeight = totalHeight;
 
     //- header
-    if ($(this).scrollTop() > offset) {
+    if (scrollPosition > offset) {
       $('.header-work').addClass('header-work--min');
     } else {
       $('.header-work').removeClass('header-work--min');
     }
+
     //- gotop
-    if ($(this).scrollTop() > (totalHeight - (screenHeight + screenHeight))) {
+    if (scrollPosition > (totalHeight - (screenHeight + screenHeight))) {
       $('.topLink').addClass('show');
     } else {
       $('.topLink').removeClass('show');
     }
+
+    //- footer
+    if (scrollPosition + containerHeight >= contentHeight - 20) {
+      $('.footer-work').addClass('footer-work--show');
+    } else {
+      $('.footer-work').removeClass('footer-work--show');
+    }
+
   });
 
   // Scroll to top when button is clicked.

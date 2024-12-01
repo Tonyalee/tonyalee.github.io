@@ -17,6 +17,13 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+:root {
+  @include desktop {
+    --header-height: 64px;
+    --footer-height: 40px;
+  }
+}
+
 
 .bd-placeholder-img {
   font-size: 1.125rem;
