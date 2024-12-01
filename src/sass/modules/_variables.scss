@@ -47,6 +47,9 @@ $mobile-min:      480px;
   --header-bg-full: color-mix(
     in oklab, var(--light-primary-200), transparent 5%
   );
+  --menu-close-btn-bg: color-mix(
+    in oklab, var(--light-primary), transparent 70%
+  );
   --wrapper-item-bg: var(--light-primary-200);
   --primary-gold: var(--light-gold);
   --primary-gold-gred: linear-gradient(to right, var(--light-gold) 70%, rgba(0,0,0, 0) 100%);
