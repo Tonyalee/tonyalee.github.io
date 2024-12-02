@@ -177,7 +177,7 @@
 
 .menu-close-btn {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   padding: 2rem;
@@ -241,11 +241,11 @@
     }
     &--opening {
       display: block;
-      animation: slideup 0.7s ease-in 1 reverse;
+      animation: slideup 0.3s ease-in 1;
     }
     &--closing {
       display: block;
-      animation: slideup 0.7s ease-in 1;
+      animation: slideup 0.3s ease-in 1 reverse;
     }
     &__close-btn {
       display: block;
@@ -256,17 +256,11 @@
 // Ani
 @keyframes slideup {
   0% {
-    top: 0px;
-    opacity: 1;
-  }
-
-  25% {
     opacity: 0;
   }
 
   100% {
-    top: -30%;
-    opacity: 0;
+    opacity: 1;
   }
 }
 
