@@ -184,35 +184,45 @@
   background: var(--menu-close-btn-bg);
   z-index: 30;
   cursor: pointer;
-  $this: &;
   &:hover {
-    #{$this}__btn {
-      transform: scale(1.15);
-    }
-  }
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    background: none;
-    border: none;
-    padding: 0;
-    transition: 0.3s ease-in;
-
-    svg {
-      display: block;
-    }
+    .line-1 { animation: menu-ani 600ms ease-in-out; }
+    .line-2 { animation: menu-ani 600ms 100ms ease-in-out; }
+    .line-3 { animation: menu-ani-bottom 600ms 200ms ease-in-out; }
   }
   @include phone {
     padding: 1rem;
   }
 }
 
+// menu icon
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .menu-line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.menu-open {
+    .line-1 {
+      transform: rotate(45deg) translate(3px, 11px);
+    }
+    .line-2 {
+      transform: rotate(-45deg) translate(3px, 11px);
+    }
+    .line-3 {
+      opacity: 0;
+    }
+  }
+}
+
+
 // RWD
-
-
 @include desktop {
   .header-work {
     padding: 0;
@@ -231,11 +241,11 @@
     }
     &--opening {
       display: block;
-      animation: slideup 1s ease-in 1 reverse;
+      animation: slideup 0.7s ease-in 1 reverse;
     }
     &--closing {
       display: block;
-      animation: slideup 1s ease-in 1;
+      animation: slideup 0.7s ease-in 1;
     }
     &__close-btn {
       display: block;
@@ -243,6 +253,7 @@
   }
 }
 
+// Ani
 @keyframes slideup {
   0% {
     top: 0px;
@@ -257,4 +268,18 @@
     top: -30%;
     opacity: 0;
   }
+}
+
+@keyframes menu-ani {
+  0% { width: 18px; }
+  20% { width: 2px; }
+  80% { width: 21px; }
+  100% { width: 18px; }
+}
+
+@keyframes menu-ani-bottom {
+  0% { width: 12px; }
+  20% { width: 2px; }
+  75% { width: 21px; }
+  100% { width: 12px; }
 }
